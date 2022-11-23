@@ -23,6 +23,6 @@ Author: Vilhelm Saxild
     format("woff2");
 }
 
-body {
+--wp--preset--font-family--body {
   font-family: "Hansen Grotesque Bold", Arial, Helvetica, sans-serif;
 }
