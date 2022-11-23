@@ -13,7 +13,7 @@ Author: Vilhelm Saxild
 
 @font-face {
   font-family: "Hansen Grotesque Bold";
-  src: url("/wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-bold-webfont")
+  src: url("/wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-bold-webfont.woff2")
     format("woff2");
 }
 
@@ -23,6 +23,6 @@ Author: Vilhelm Saxild
     format("woff2");
 }
 
-a {
+body {
   font-family: "Hansen Grotesque Bold", Arial, Helvetica, sans-serif;
 }
