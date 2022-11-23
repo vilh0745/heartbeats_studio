@@ -1,0 +1,28 @@
+/*
+Theme Name: Heartbeats Studio 
+Template: extendable
+Version: 1.0.0
+Author: Vilhelm Saxild
+*/
+
+@font-face {
+  font-family: "Hansen Grotesque";
+  src: url("/wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-webfont.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Hansen Grotesque Bold";
+  src: url("/wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-bold-webfont")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Hansen Grotesque Medium";
+  src: url("/wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-medium-webfont.woff2")
+    format("woff2");
+}
+
+a {
+  font-family: "Hansen Grotesque Bold", Arial, Helvetica, sans-serif;
+}
