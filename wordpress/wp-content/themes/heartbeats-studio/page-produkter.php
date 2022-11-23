@@ -40,6 +40,8 @@ get_header();
             const klon = skabelon.cloneNode(true).content;
             klon.querySelector("img").src = produkt.billede.guid;
             klon.querySelector("h2").innerHTML = produkt.titel.rendered;
+            klon.querySelector("h3").innerHTML = produkt.produkttype.rendered;
+
             liste.appendChild(klon);
         })
     }
