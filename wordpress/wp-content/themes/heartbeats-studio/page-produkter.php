@@ -8,7 +8,8 @@
  * @subpackage Twenty_Twenty_One
  * @since Twenty Twenty-One 1.0
  */
- get_template_part( 'template-parts/header/site-header' ); ?>
+ get_header();
+ ?>
 
 
 <section id="primary" class="content-area">
