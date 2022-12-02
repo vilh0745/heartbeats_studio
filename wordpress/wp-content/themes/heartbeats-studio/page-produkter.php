@@ -12,13 +12,7 @@
  ?>
 
  <style>
-    #main {
-        display: grid;
-        grid-template-columns: 30% 70%;
-    }
-
     #case_oversigt {
-        grid-column: 2;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
@@ -28,15 +22,22 @@
       }
 
       img {
-        width: 70%;
+        width: 100%;
         height: auto;
         display: block;
+      }
+
+       article img {
+         margin-bottom: 12px;
+      }
+
+       article {
+        margin-bottom: 20px;
       }
  </style>
 
 
-<section id="primary" class="content-area">
-    <main id="main" class="site-main">
+
 
 <section id="case_oversigt"></section>
 </main>

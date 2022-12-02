@@ -1,28 +1,51 @@
 /*
 Theme Name: Heartbeats Studio 2.0 
-Template: twentysixteen
-Version: 1.1.1
+Template: twentytwentyone
+Version: 1.1.3
 Author: Vilhelm Saxild
 */
 
 @font-face {
   font-family: "hansen_grotesque";
-  src: url("/wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-webfont.woff2")
-    format("woff2");
+  src: url("fonts/hansengrotesque-webfont.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "hansen_grotesque_bold";
-  src: url("/wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-bold-webfont.woff2")
-    format("woff2");
+  src: url("fonts/hansengrotesque-bold-webfont.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "hansen_grotesque_medium";
-  src: url("/wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-medium-webfont.woff2")
-    format("woff2");
+  src: url("fonts/hansengrotesque-medium-webfont.woff2") format("woff2");
 }
 
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+b,
+li {
   font-family: "hansen_grotesque_bold", Arial, Helvetica, sans-serif;
+}
+
+h6,
+p {
+  font-family: "hansen_grotesque_medium", Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+  margin-left: -5px;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.site-logo .custom-logo {
+  max-width: 0;
+  max-height: 0;
+  height: auto;
+  width: 35vw;
 }
