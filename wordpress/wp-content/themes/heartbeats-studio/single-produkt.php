@@ -18,6 +18,8 @@ get_header();
 	<button class="luk">Tilbage</button>
 	<section class="indhold">
 		<article class="enkeltProdukt">
+			<h5></h5>
+			<h6></h6>
 			<img id="pic" src="" alt="">
 			<p class="text"></p>
 		</article>
@@ -38,9 +40,10 @@ get_header();
 	}
 
 	function visProdukt() {
-		document.querySelector("h2").innerHTML = produkt.titel;
-		document.querySelector(".text").innerHTML = produkt.produkttype;
+		document.querySelector("h5").innerHTML = produkt.titel;
+		document.querySelector("h6").innerHTML = produkt.produkttype;
 		document.querySelector("#pic").src = produkt.billede.guid;
+		document.querySelector(".text").innerHTML = produkt.beskrivelse;
 	}
 
 			document.querySelector(".luk").addEventListener("click", () => {

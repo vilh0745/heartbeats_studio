@@ -14,7 +14,7 @@
  <style>
     #main {
         display: grid;
-        grid-template-columns: 10vw 80vw;
+        grid-template-columns: 30% 70%;
     }
 
     #case_oversigt {
@@ -28,7 +28,7 @@
       }
 
       img {
-        width: 100%;
+        width: 70%;
         height: auto;
         display: block;
       }
