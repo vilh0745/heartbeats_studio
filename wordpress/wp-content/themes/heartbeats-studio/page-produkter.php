@@ -34,6 +34,11 @@
        article {
         margin-bottom: 20px;
       }
+
+      article img:hover {
+        cursor: pointer;
+        scale: 1.1;
+}
  </style>
 
 

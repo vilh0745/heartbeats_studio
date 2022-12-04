@@ -37,15 +37,31 @@ p {
 }
 
 .site-header {
+  padding: 0;
+}
+
+.site-header {
   margin-left: -5px;
-  margin-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .site-logo .custom-logo {
+  position: fixed;
   max-width: 0;
   max-height: 0;
+  max-width: 35vw;
+  max-height: 35vw;
   height: auto;
   width: 35vw;
+}
+
+.primary-navigation {
+  position: fixed;
+  margin: auto;
+}
+
+@media (min-width: 492px) {
+  .primary-navigation {
+    position: absolute;
+    margin: 25px;
+  }
 }

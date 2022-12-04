@@ -12,12 +12,46 @@
 get_header();
 ?>
 
+<style>
+.enkeltProdukt {
+	display: grid;
+	grid-template-columns: .5fr 2fr 3fr;
+}
 
-	<button class="luk">Tilbage</button>
+h5,
+h6,
+.luk {
+	grid-column: 1;
+	position: fixed;
+}
+
+#pic {
+	grid-column: 2;
+}
+
+.text {
+	grid-column: 3
+}
+
+.indhold {
+    gap: 20px;
+    width: 90vw;
+    max-width: 1580px;
+    margin: 30px auto;
+}
+.enkeltProdukt {
+    padding: 10px;
+    margin: 10px;
+	max-height: 50vh;
+}
+
+</style>
+
 	<section class="indhold">
 		<article class="enkeltProdukt">
 			<h5></h5>
 			<h6></h6>
+			<button class="luk">Tilbage</button>
 			<img id="pic" src="" alt="">
 			<p class="text"></p>
 		</article>
