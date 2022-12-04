@@ -59,6 +59,11 @@ p {
   margin: auto;
 }
 
+.site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo img {
+  max-height: 0;
+  max-height: 35vw;
+}
+
 @media (min-width: 492px) {
   .primary-navigation {
     position: absolute;
