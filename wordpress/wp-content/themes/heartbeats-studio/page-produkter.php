@@ -74,9 +74,9 @@
     const catUrl = "http://vilhelmsaxild.com/kea/heartbeats_studio/wordpress/wp-json/wp/v2/categories?per_page=100";
     async function getJson() {
         let response = await fetch(url);
-        const catdata = await fetch(catUrl);
+        let catdata = await fetch(catUrl);
         produkter = await response.json();
-        categories = await response.json();
+        categories = await catdata.json();
 
         visProdukter();
         opretKnapper();
