@@ -14,9 +14,9 @@
  <style>
     #case_oversigt {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 20px;
-        width: 90vw;
+        width: 75vw;
         max-width: 1580px;
         margin: 0 auto;
       }
@@ -29,6 +29,7 @@
 
        article img {
          margin-bottom: 12px;
+         transition-duration: 0.5s;
       }
 
        article {
@@ -37,7 +38,8 @@
 
       article img:hover {
         cursor: pointer;
-        scale: 1.1;
+        scale: 1.01;
+        
 }
  </style>
 
@@ -54,8 +56,11 @@
     </article>
 </template>
 
+<nav class="gren"></nav>
+
 <script>
     let produkter = [];
+    let categories;
     const liste = document.querySelector("#case_oversigt");
     const skabelon = document.querySelector("template");
     let filterProdukt = "alle"
@@ -66,11 +71,38 @@
     }
 
     const url = "http://vilhelmsaxild.com/kea/heartbeats_studio/wordpress/wp-json/wp/v2/produkt?per_page=100";
+    const catUrl = "http://vilhelmsaxild.com/kea/heartbeats_studio/wordpress/wp-json/wp/v2/categories?per_page=100";
     async function getJson() {
         let response = await fetch(url);
+        const catdata = await fetch(catUrl);
         produkter = await response.json();
+        categories = await response.json();
+
+        visProdukter();
+        opretKnapper();
+    }
+
+    function opretKnapper() {
+        categories.forEach(cat => {
+            document.querySelector(".gren").innerHTML += `<button class="filter" data-element="${cat.id}">${cat.name}</button>`
+        });
+
+        addEventListenersToButtons();
         visProdukter();
     }
+
+    function addEventListenersToButtons () {
+        document.querySelectorAll("button").forEach(elm => {
+          elm.addEventListener("click", filtrering);
+        })
+      };
+
+      function filtrering() {
+        filterProdukt = this.dataset.produkt;
+        console.log(filterProdukt);
+        visProdukter();
+      }
+
 
     function visProdukter() {
         console.log(produkter);
