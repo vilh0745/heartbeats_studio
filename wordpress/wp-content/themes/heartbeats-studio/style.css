@@ -7,17 +7,20 @@ Author: Vilhelm Saxild
 
 @font-face {
   font-family: "hansen_grotesque";
-  src: url("fonts/hansengrotesque-webfont.woff2") format("woff2");
+  src: url("../wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-webfont.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "hansen_grotesque_bold";
-  src: url("fonts/hansengrotesque-bold-webfont.woff2") format("woff2");
+  src: url("../wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-bold-webfont.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "hansen_grotesque_medium";
-  src: url("fonts/hansengrotesque-medium-webfont.woff2") format("woff2");
+  src: url("../wordpress/wp-content/themes/heartbeats-studio/fonts/hansengrotesque-medium-webfont.woff2")
+    format("woff2");
 }
 
 h1,
@@ -36,6 +39,10 @@ p {
   font-family: "hansen_grotesque_medium", Arial, Helvetica, sans-serif;
 }
 
+.medvirkende {
+  font-family: "hansen-grotesque-med" !important;
+}
+
 .site-header {
   padding: 0;
 }
@@ -52,6 +59,11 @@ p {
   max-height: 35vw;
   height: auto;
   width: 35vw;
+  transition: 0.5s;
+}
+
+.site-logo .custom-logo:hover {
+  scale: 1.02;
 }
 
 .primary-navigation {

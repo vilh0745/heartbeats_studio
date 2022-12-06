@@ -20,7 +20,7 @@
 
 	<footer id="colophon" class="site-footer">
 
-		<img src="../heartbeats-studio/img/gfx-footer-desktop.svg" alt="footer-picture">
+		<img src="../wp-content/themes/heartbeats-studio/img/gfx-footer-desktop.svg" alt="footer-picture">
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
