@@ -45,6 +45,26 @@
         overflow-x: scroll;
     }
 
+         .dropdown {
+        position: relative;
+        margin-top: 50px;
+        margin-left: 28px;
+     }
+
+     .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #0a0a0a;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1002;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: grid;
+    }
+
     @media (min-width: 492px) {
      #case_oversigt {
         display: grid;
@@ -54,6 +74,7 @@
         width: 57vw;
         max-width: 1580px;
         margin: 0 auto;
+        transition: 0.2s;
      }
 
      .gren {
@@ -62,6 +83,21 @@
         display: block;
         overflow: hidden;
         width: fit-content;
+    }
+
+             .dropdown {
+        position: fixed;
+        margin-top: 0;
+        margin-left: 28px;
+     }
+
+     .dropdown-content {
+        display: none;
+        position: absolute;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: grid;
     }
 
 }
@@ -77,20 +113,43 @@
     #case_oversigt {
         width: 75vw;
      }
+
+     .dropdown {
+        position: fixed;
+        margin-top: 0;
+        margin-left: 28px;
+     }
+
+     .dropdown-content {
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: grid;
+    }
+    
+}
+
+@media (min-width: 1457px) {
+     .dropdown-content {
+        display: grid;
+    }
 }
 
 
  </style>
 
 
-
-<nav class="gren"></nav>
+<div class="dropdown">
+    <h4>Filtrer &#8964</h4>
+<nav class="gren dropdown-content"></nav>
+</div>
 <section id="case_oversigt"></section>
 </main>
 <template>
     <article>
         <img src="" alt="">
-        <h5></h5>
+        <h4></h4>
         <h6></h6>
     </article>
 </template>
@@ -130,7 +189,6 @@
           
 
         addEventListenersToButtons();
-        visProdukter();
     }
 
     function addEventListenersToButtons () {
@@ -154,7 +212,7 @@
             if ( filterProdukt == "alle" || produkt.categories.includes(parseInt(filterProdukt))) {
             const klon = skabelon.cloneNode(true).content;
             klon.querySelector("img").src = produkt.billede.guid;
-            klon.querySelector("h5").innerHTML = produkt.titel + " " + produkt.medvirkende;
+            klon.querySelector("h4").innerHTML = produkt.titel + " " + produkt.medvirkende;
             klon.querySelector("h6").innerHTML = produkt.produkttype;
             klon.querySelector("article").addEventListener("click", () => {
                 location.href = produkt.link;
@@ -166,6 +224,22 @@
 
 </script>
 
-<?php
-get_footer();
-?>
+</main><!-- #main -->
+		</div><!-- #primary -->
+	</div><!-- #content -->
+
+	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+
+	<footer id="colophon" class="site-footer">
+
+		<img src="../wordpress/wp-content/themes/heartbeats-studio/img/gfx-footer-desktop.svg" alt="footer-picture">
+
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+</html>

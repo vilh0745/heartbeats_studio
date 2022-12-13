@@ -13,8 +13,9 @@
 
  <style>
     #case_oversigt {
-        display: block;
-      }
+        display: grid;
+        gap: 70px;
+        margin: 50px;      }
 
       img {
         width: 100%;

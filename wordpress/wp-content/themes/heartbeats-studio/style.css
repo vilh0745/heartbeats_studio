@@ -43,6 +43,59 @@ p {
   font-family: "hansen-grotesque-med" !important;
 }
 
+#case_oversigt {
+  display: grid;
+  gap: 70px;
+  margin: 50px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+article img {
+  margin-bottom: 12px;
+  transition-duration: 0.5s;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+article img:hover {
+  cursor: pointer;
+  scale: 1.01;
+}
+
+.gren {
+  position: relative;
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+}
+
+.dropdown {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 28px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0a0a0a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1002;
+}
+
+.dropdown:hover .dropdown-content {
+  display: grid;
+}
+
 .site-header {
   padding: 0;
 }
@@ -76,9 +129,267 @@ p {
   max-height: 35vw;
 }
 
+.primary-navigation a {
+  transition: 0.2s;
+}
+
+.primary-navigation a:hover {
+  scale: 1.1;
+  text-decoration: none;
+}
+
+.site-header {
+  padding: 0;
+}
+
+.site-header {
+  margin-left: -5px;
+}
+
+.site-logo .custom-logo {
+  position: fixed;
+  max-width: 0;
+  max-height: 0;
+  max-width: 115vw;
+  max-height: 115vw;
+  height: auto;
+  width: 275px;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.site-logo .custom-logo:hover {
+  scale: 1.01;
+}
+
+.primary-navigation {
+  position: fixed;
+  margin: auto;
+}
+
+.site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo img {
+  max-height: 0;
+  max-height: 100vw;
+}
+
+.wp-block-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#site-navigation {
+  z-index: 1000;
+}
+
+h5,
+h6 {
+  font-weight: 300;
+}
+
+article img {
+  object-fit: cover;
+  height: max-content;
+  aspect-ratio: 4/5;
+}
+
+#main {
+  margin-top: 50px;
+}
+
+.gren {
+  z-index: 100;
+}
+
+button:not(:hover):not(:active):not(.has-background) {
+  background-color: transparent;
+  color: white;
+  transition: 0.5s;
+}
+
+button {
+  border: 0;
+  text-align: left;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  scale: 1.05;
+}
+
+#colophon {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2000;
+}
+
+#colophon img {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.widget-area {
+  position: relative;
+  z-index: 1001;
+  margin: 0;
+  max-width: 100vw;
+  width: 100vw;
+  background-color: black;
+}
+
+.widget_block {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#post-9 {
+  margin-top: 30%;
+  grid-column: 2;
+  margin-bottom: 60px;
+}
+
+header.entry-header.alignwide {
+  display: none;
+}
+
+#post-9 p {
+  margin-left: 0;
+  margin-left: 4vw;
+}
+
+.wp-block-video video {
+  left: 0;
+}
+
+.contacts {
+  margin-left: 10px;
+}
+
 @media (min-width: 492px) {
   .primary-navigation {
     position: absolute;
     margin: 25px;
+  }
+
+  #post-9 {
+    margin-top: 30%;
+  }
+
+  #main {
+    margin-top: 220px;
+    display: grid;
+    grid-template-columns: 17vw auto;
+    overflow: hidden;
+  }
+
+  #case_oversigt {
+    grid-column: 2;
+  }
+
+  .site-logo .custom-logo {
+    position: fixed;
+    max-width: 0;
+    max-height: 0;
+    max-width: 35vw;
+    max-height: 35vw;
+    height: auto;
+    width: 35vw;
+  }
+
+  .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo img {
+    max-height: 0;
+    max-height: 35vw;
+  }
+
+  .gren {
+    display: grid;
+    margin-top: 0;
+  }
+
+  .contacts {
+    margin-top: -20px;
+    margin-left: 4vw;
+    grid-column: 2;
+  }
+
+  #case_oversigt {
+    display: grid;
+    margin-left: 0;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    width: 57vw;
+    max-width: 1580px;
+    margin: 0 auto;
+    transition: 0.2s;
+  }
+
+  .gren {
+    grid-column: 1;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: fit-content;
+  }
+
+  .dropdown {
+    position: fixed;
+    margin-top: 0;
+    margin-left: 28px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: grid;
+  }
+}
+
+@media (min-width: 960px) {
+  .gren {
+    grid-column: 1;
+    position: fixed;
+    display: grid;
+    overflow: hidden;
+  }
+
+  #case_oversigt {
+    width: 75vw;
+  }
+
+  .dropdown {
+    position: fixed;
+    margin-top: 0;
+    margin-left: 28px;
+  }
+
+  .dropdown-content {
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: grid;
+  }
+}
+
+@media (min-width: 1300px) {
+  .contacts {
+    position: fixed;
+    margin-top: 0;
+    margin-left: 10px;
+    grid-column: 1;
+  }
+}
+
+@media (min-width: 1457px) {
+  .dropdown-content {
+    display: grid;
   }
 }
