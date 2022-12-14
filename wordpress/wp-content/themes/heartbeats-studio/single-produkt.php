@@ -18,10 +18,12 @@ get_header();
 	gap: 20px;
 }
 
-.titelnavn {
+h5,
+h2 {
 	grid-column: 1;
 	margin-left: 28px;
 	position: relative;
+	
 }
 
 .text {
@@ -37,15 +39,14 @@ get_header();
 
 .luk {
 	display: none;
-	margin-left: -28px;
 }
 
 .indhold {
 	overflow: hidden;
 }
 
-h6 {
-		max-width: 520px;
+h5 {
+		margin-bottom: 20px;;
 	}
 
 @media (min-width: 492px) {
@@ -62,6 +63,16 @@ h6 {
 	h6 {
 		max-width: 220px;
 	}
+
+	h5,
+	h2 {
+	margin-left: 0;
+	position: relative;
+	
+}
+
+.titelnavn {
+	margin-left: 20px;}
 
 	.video_pics {
 	width: 100%;
@@ -105,10 +116,24 @@ h6 {
 
 .text {
 	grid-column: 3;
-	margin-left: 15px;
 	margin-right: 25px;
 	position: fixed;
 	max-width: 600px;
+	height: 460px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    cursor: s-resize;
+	padding-bottom: 60px;
+}
+
+#overskrift {
+	position: fixed;
+}
+
+h5,
+h2 {
+	grid-column: 3;
+	margin-left: 0;
 }
 
 .titelnavn {
@@ -123,15 +148,18 @@ h6 {
 		<article class="enkeltProdukt">
 			
 			<div class="titelnavn">
-			<h4></h4>
-			<h6></h6>
+
 			<button class="luk">Tilbage</button>
 			</div>
 			<img id="pic" class="video_pics" src="" alt="">
 			<div class="txtbox">
+			<div id="overskrift">
+				<h2></h2>
+				<h5></h5>
 			<p class="text"></p>
 			</div>
-			<video id="video1" class="video_pics" src="" poster="remove." autoplay muted loop controls></video>
+			</div>
+			<video id="video1" class="video_pics" src="" poster="" autoplay muted loop controls></video>
 			<video id="video2" class="video_pics" src="" poster="" autoplay muted loop controls ></video>
 		</article>
 	</section>
@@ -151,8 +179,8 @@ h6 {
 	}
 
 	function visProdukt() {
-		document.querySelector("h4").innerHTML = produkt.titel;
-		document.querySelector("h6").innerHTML = produkt.produkttype;
+		document.querySelector("h2").innerHTML = produkt.titel;
+		document.querySelector("h5").innerHTML = produkt.produkttype;
 		document.querySelector("#pic").src = produkt.billede.guid;
 		document.querySelector(".text").innerHTML = produkt.beskrivelse;
 		document.querySelector("#video1").poster = produkt.video1.guid;
