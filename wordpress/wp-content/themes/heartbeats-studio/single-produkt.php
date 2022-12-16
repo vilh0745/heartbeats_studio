@@ -49,6 +49,7 @@ h5 {
 		margin-bottom: 20px;;
 	}
 
+
 @media (min-width: 492px) {
 .luk {
 	display: block;
@@ -124,6 +125,7 @@ h5 {
     scroll-behavior: smooth;
     cursor: s-resize;
 	padding-bottom: 60px;
+	font-size: 15px;
 }
 
 #overskrift {
@@ -141,6 +143,13 @@ h2 {
 }
 
 }
+
+@media (min-width: 1360px) {
+	.text {
+	font-size: 17px;
+	}
+}
+
 </style>
 
 	<section class="indhold">
@@ -159,8 +168,8 @@ h2 {
 			<p class="text"></p>
 			</div>
 			</div>
-			<video id="video1" class="video_pics" src="" poster="" autoplay muted loop controls></video>
-			<video id="video2" class="video_pics" src="" poster="" autoplay muted loop controls ></video>
+			<video id="video1" class="video_pics" src="" poster="" autoplay muted loop></video>
+			<video id="video2" class="video_pics" src="" poster="" autoplay muted loop ></video>
 		</article>
 	</section>
 
@@ -187,11 +196,28 @@ h2 {
 		document.querySelector("#video2").poster = produkt.video2.guid;
 		document.querySelector("#video1").src = produkt.video1.guid;
 		document.querySelector("#video2").src = produkt.video2.guid;
+
 	}
 
 			document.querySelector(".luk").addEventListener("click", () => {
 				history.back();
 			});
+
+
+    (function(window) {
+        function setupVideo()
+        {
+            let v = document.getElementById('video1');
+			let v2 = document.getElementById('video2');
+            v.addEventListener('mouseover', function() { this.controls = true; }, false);
+			v2.addEventListener('mouseover', function() { this.controls = true; }, false);
+            v.addEventListener('mouseout', function() { this.controls = false; }, false);
+			v2.addEventListener('mouseout', function() { this.controls = false; }, false);
+
+        }
+
+        window.addEventListener('load', setupVideo, false);
+    })(window);
 </script>
 
 </main><!-- #main -->

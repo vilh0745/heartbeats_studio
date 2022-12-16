@@ -48,7 +48,7 @@
      #case_oversigt {
         display: grid;
         margin-left: 0;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         gap: 20px;
         width: 57vw;
         max-width: 1580px;
